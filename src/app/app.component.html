@@ -8,16 +8,23 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto" id="navbar_component">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home  <span class="sr-only">(current)</span></a>
         </li>
-
-        <li class="nav-item" style="margin-left: auto">
-          <a class="nav-link" href="#">  Cerrar Sesion  </a>
+        <li class="nav-item active" id='listar_bodegas' style="display: none">
+          <a id="btn_bodegas" class="nav-link">Listar Bodegas  <span class="sr-only">(current)</span></a>
         </li>
-
+        <li class="nav-item active" id='listar_categorias' style="display: none">
+          <a id="btn_categorias" class="nav-link">Listar Categorias  <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" id='listar_productos' style="display: none">
+          <a id="btn_productos" class="nav-link">Listar Productos  <span class="sr-only">(current)</span></a>
+        </li>
       </ul>
+      <div class="nav-item">
+        <a class="nav-link" href="#">  Cerrar Sesion  </a>
+      </div>
     </div>
   </nav>
 </div>

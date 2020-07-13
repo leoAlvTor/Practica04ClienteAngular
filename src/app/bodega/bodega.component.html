@@ -1,1 +1,23 @@
+<div class="container margins" style="border: 2px solid #5f647a; border-radius: 5px; margin-bottom: 15px">
+  <ul>
+    <li *ngFor="let bodega of bodegas">
 
+      <h3><strong>Codigo: </strong> {{ bodega.codigo }}</h3>
+      <button class="btn btn-info btn-block" [routerLink]="['/categoria']" [queryParams]="{bodega_id: bodega.codigo}">Abrir Bodega</button><br>
+      <ul>
+        <li>
+          <h4><strong>Nombre: </strong> {{ bodega.nombre }}</h4>
+        </li>
+        <li>
+          <h4><strong>Ciudad: </strong> {{ bodega.ciudad.nombre }}</h4>
+        </li>
+        <li>
+          <h4><strong>Provincia: </strong> {{ bodega.ciudad.provincia.nombre }}</h4>
+        </li>
+        <li>
+          <h4><strong>Pais: </strong> {{ bodega.ciudad.provincia.pais.nombre }}</h4>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

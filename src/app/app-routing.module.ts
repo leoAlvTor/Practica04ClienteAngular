@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: BodegaComponent},
   {path: 'categoria', component: CategoriaComponent},
+  {path: 'categoria/:bodega', component: CategoriaComponent},
   {path: 'login', component: LoginComponent},
   {path: 'pedido', component: PedidoComponent},
   {path: 'productos', component: ProductosComponent},

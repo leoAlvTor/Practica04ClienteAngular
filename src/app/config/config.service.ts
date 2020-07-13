@@ -10,6 +10,14 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   }
 
+  getBodegas(){
+    let url = 'rest/bodega/list';
+    return this.http.get(url, {
+      responseType: 'text'
+    });
+
+  }
+
   registrarCliente(cedula: string, correo: string, password: string){
     let url = 'rest/usuario/register/';
 
