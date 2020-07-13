@@ -1,0 +1,25 @@
+<div class="form-group" style="margin-left: auto; margin-right: auto; margin-top: 10px; width: 70%; display: block">
+  <div id="msg_exito" class="alert alert-success" role="alert" style="display: none">
+    <h2 style="font-size: 20px">Se ha creado el usuario correctamente!</h2>
+  </div>
+  <div id="msg_error" class="alert alert-danger" role="alert" style="display: none">
+    <h2 style="font-size: 20px">Ha ocurrido un error, porfavor verificar que el usuario ya exista en la empresa.</h2>
+  </div>
+</div>
+
+<div class="container" style="  margin-left: auto; margin-right: auto; text-align: center; display: block; width: 50%;
+max-width: 700px">
+
+  <label class="blockquote" style="font-size: 50px">Registro </label>
+
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <input id="cedula" name="cedula" class="btn-block" type="text" placeholder="Ingrese su cedula" ngModel="">
+    <br>
+    <input id="correo" name="correo" class="btn-block" type="email" placeholder="Ingrese su correo" ngModel="">
+    <br>
+    <input id="password" name="password" class="btn-block" type="password" placeholder="Ingrese su password" ngModel="">
+    <br>
+    <input type="submit" class="btn btn-info btn-block">
+    <a class="btn btn-danger btn-block" [routerLink]="['/login']">Ya esta registrado? Inicia Sesion</a>
+  </form>
+</div>

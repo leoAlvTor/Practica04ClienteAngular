@@ -1,0 +1,24 @@
+<div class="form-group" style="margin-left: auto; margin-right: auto; margin-top: 10px; width: 70%; display: block">
+  <div id="msg_error" class="alert alert-danger" role="alert" style="display: none">
+    <h2 style="font-size: 20px">Ha ocurrido un error, verifique que haya ingresado los datos correctamente.</h2>
+  </div>
+</div>
+
+<div class="container formulario" style="margin-left: auto; margin-right: auto; width: 500px; color: white">
+  <label class="blockquote" style="text-align: center; font-size: 50px">Iniciar Sesion</label>
+  <form #signupForm="ngForm" (ngSubmit)="login(signupForm)">
+    <div class="form-group">
+      <label class="btn-block"> CEDULA:
+        <input name="cedula" id="cedula" type="text"
+               class="form-control" ngModel>
+      </label>
+      <label class="btn-block"> PASSWORD:
+        <input name="password" id="password" type="password"
+               class="form-control" ngModel>
+      </label>
+      <hr>
+      <button type="submit" class="btn btn-primary btn-block">INGRESAR</button>
+      <a class="btn btn-info btn-block add_margin" [routerLink]="['/registro']">Aun no estas registrado?</a>
+    </div>
+  </form>
+</div>
