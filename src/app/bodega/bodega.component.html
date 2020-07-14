@@ -1,9 +1,9 @@
-<div class="container margins" style="border: 2px solid #5f647a; border-radius: 5px; margin-bottom: 15px">
+<div class="container margins" style="margin-bottom: 15px">
   <ul>
-    <li *ngFor="let bodega of bodegas">
-
+    <li *ngFor="let bodega of bodegas" class="card bg-primary" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
       <h3><strong>Codigo: </strong> {{ bodega.codigo }}</h3>
-      <button class="btn btn-info btn-block" [routerLink]="['/categoria']" [queryParams]="{bodega_id: bodega.codigo}">Abrir Bodega</button><br>
+      <button class="btn btn-info btn-block" [routerLink]="['/categoria']" [queryParams]="{bodega_id: bodega.codigo}">Abrir Bodega</button>
+      <hr style="margin-top: 5px; margin-bottom: 5px">
       <ul>
         <li>
           <h4><strong>Nombre: </strong> {{ bodega.nombre }}</h4>

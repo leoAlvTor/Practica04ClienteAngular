@@ -27,10 +27,10 @@ export class BodegaComponent implements OnInit {
     console.log(this._http.getBodegas().subscribe(
       data =>{
         if (typeof data === 'string') {
-          let leo = JSON.parse(data);
-          let longitud = leo.length;
+          let response = JSON.parse(data);
+          let longitud = response.length;
           for (let i = 0; i < longitud; i++) {
-            this.bodegas.push(leo[i]);
+            this.bodegas.push(response[i]);
           }
         }
       },

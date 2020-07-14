@@ -1,1 +1,17 @@
-<p>categoria works!</p>
+<div class="container margins" style="margin-bottom: 15px">
+  <ul>
+    <li *ngFor="let categoria of categorias" class="card bg-success" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
+      <h3><strong>Codigo:</strong> {{ categoria.codigo }}</h3>
+      <button class="btn btn-danger btn-block" [routerLink]="['/producto']" [queryParams]="{bodega_id: bodegaId, categoria_id: categoria.codigo}">Abrir Categoria</button>
+      <hr style="margin-top: 5px; margin-bottom: 5px">
+      <ul>
+        <li>
+          <h4><strong>Nombre: </strong> {{ categoria.nombre }}</h4>
+        </li>
+        <li>
+          <h4><strong>Imagen: </strong><img src="{{ categoria.imagen }}" width="100px" height="100px" alt=""></h4>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -10,6 +10,19 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   }
 
+  getCategorias(bodegaId: string){
+    let url = 'rest/categoria/list';
+    const body = new HttpParams()
+      .set('bodega_id', bodegaId);
+
+    return this.http.post(url,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      });
+  }
+
   getBodegas(){
     let url = 'rest/bodega/list';
     return this.http.get(url, {
