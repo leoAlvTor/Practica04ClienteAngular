@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ConfigService} from '../config/config.service';
 import {Router} from '@angular/router';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-bodega',
@@ -13,13 +14,14 @@ export class BodegaComponent implements OnInit {
   private bodegas: object[] = [];
 
 
-  constructor(private _http: ConfigService, private _router: Router) { }
+  constructor(private _http: ConfigService, private _router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     document.getElementById('navbar').style.display = 'block';
     document.getElementById('listar_bodegas').style.display = 'block';
 
     document.getElementById('btn_bodegas').addEventListener('click', (ev => this.getBodegas()));
+    alert(this.cookieService.get('cedula'));
   }
 
   getBodegas(){

@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'pedido', component: PedidoComponent},
   {path: 'productos', component: ProductosComponent},
+  {path: 'productos/:bodega', component: ProductosComponent},
   {path: 'registro', component: RegistroComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

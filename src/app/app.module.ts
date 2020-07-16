@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from '@angular/forms';
 import {ConfigService} from './config/config.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {ConfigService} from './config/config.service';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [ConfigService],
+  providers: [ConfigService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

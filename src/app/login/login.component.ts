@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { NgForm } from '@angular/forms';
 import {Router} from '@angular/router';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   private consumer: ConfigService;
 
-  constructor(private _http: ConfigService, private _router: Router) {}
+  constructor(private _http: ConfigService, private _router: Router, private cookieService: CookieService) {}
 
   ngOnInit(): void {}
 
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           if(data == '1'){
+            this.cookieService.set('cedula',form.value.cedula);
             this.redirectBodega();
           }
         },

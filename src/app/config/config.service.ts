@@ -10,6 +10,22 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   }
 
+  getProductos(bodegaId: string, categoriaId: string){
+    let url = 'rest/producto/list';
+    const body = new HttpParams()
+      .set('bodegaId', bodegaId)
+      .set('categoriaId', categoriaId);
+    return this.http.post(
+      url,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
+
+  }
+
   getCategorias(bodegaId: string){
     let url = 'rest/categoria/list';
     const body = new HttpParams()

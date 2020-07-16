@@ -2,7 +2,7 @@
   <ul>
     <li *ngFor="let categoria of categorias" class="card bg-success" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
       <h3><strong>Codigo:</strong> {{ categoria.codigo }}</h3>
-      <button class="btn btn-danger btn-block" [routerLink]="['/producto']" [queryParams]="{bodega_id: bodegaId, categoria_id: categoria.codigo}">Abrir Categoria</button>
+      <button class="btn btn-danger btn-block" [routerLink]="['/productos']" [queryParams]="{bodega_id: bodegaId, categoria_id: categoria.codigo}">Abrir Categoria</button>
       <hr style="margin-top: 5px; margin-bottom: 5px">
       <ul>
         <li>
