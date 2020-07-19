@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import {ConfigService} from './config/config.service';
 import {CookieService} from 'ngx-cookie-service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {CookieService} from 'ngx-cookie-service';
     CategoriaComponent,
     ProductosComponent,
     PedidoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,

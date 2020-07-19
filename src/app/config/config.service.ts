@@ -10,6 +10,37 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   }
 
+  /**ScorpionCODeStart*/
+  crearPedido(productoId:string, cedulaId:string,cantidad:string){
+    let url='rest/pedido/crearpedido';
+    const body = new HttpParams()
+    .set('producto_Id',productoId)
+    .set('cedula_Id',cedulaId)
+    .set('cantidad',cantidad);
+    return this.http.post(
+      url,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
+  }
+
+  confirmPedido(cedulaId:string){
+    let url='rest/pedido/confirmpedido';
+    const body = new HttpParams()
+    .set('cedula_Id',cedulaId);
+    return this.http.post(
+      url,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
+  }
+  /**ScorpionCodeEnds */
   getProductos(bodegaId: string, categoriaId: string){
     let url = 'rest/producto/list';
     const body = new HttpParams()
@@ -25,6 +56,7 @@ export class ConfigService {
     );
 
   }
+
 
   getCategorias(bodegaId: string){
     let url = 'rest/categoria/list';
@@ -62,6 +94,7 @@ export class ConfigService {
         responseType: 'text'
       });
   }
+
 
   verificarUsuario(usuario: string, password: string): Observable<any> {
     let url = 'rest/usuario/login/';

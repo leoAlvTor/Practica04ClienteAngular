@@ -1,1 +1,23 @@
-<p>productos works!</p>
+<div class="container margins" style="margin-bottom: 15px">
+    <h1>{{ cedulaId }}</h1>
+    <ul>
+        <li *ngFor="let producto of productos" class="card bg-success" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
+            <button class="btn btn-danger btn-block" [routerLink]="['/pedido']" [queryParams]="{producto_Id: producto.codigo, cedula_Id: cedulaId, cantidad: cantidad }">Agregar a Pedido</button>
+
+            <hr style="margin-top: 5px; margin-bottom: 5px">
+            <ul>
+
+                <li>
+                    <h4><strong>Nombre: </strong> {{ producto.nombre }}</h4>
+                </li>
+                <li>
+                    <h4><strong>Precio</strong> {{ producto.precioVenta }}</h4>
+                </li>
+                <li>
+                    <h4>Cantidad: </h4><input (keyup)="onKey($event)">
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>

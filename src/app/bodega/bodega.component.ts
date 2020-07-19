@@ -11,7 +11,7 @@ import {CookieService} from 'ngx-cookie-service';
 })
 export class BodegaComponent implements OnInit {
 
-  private bodegas: object[] = [];
+  public bodegas: object[] = [];
 
 
   constructor(private _http: ConfigService, private _router: Router, private cookieService: CookieService) { }
