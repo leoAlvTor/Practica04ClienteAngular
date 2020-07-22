@@ -1,6 +1,6 @@
 <div class="container margins" style="margin-bottom: 15px">
     <ul>
-        <li *ngFor="let bodega of bodegas" class="card bg-primary" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
+        <li *ngFor="let bodega of bodegas" class="card bg-primary" style="width:30%;float:left;padding: 10px 10px 10px 10px">
             <h3><strong>Codigo: </strong> {{ bodega.codigo }}</h3>
             <button class="btn btn-info btn-block" [routerLink]="['/categoria']" [queryParams]="{bodega_id: bodega.codigo}">Abrir Bodega</button>
             <hr style="margin-top: 5px; margin-bottom: 5px">
@@ -11,12 +11,8 @@
                 <li>
                     <h4><strong>Ciudad: </strong> {{ bodega.ciudad.nombre }}</h4>
                 </li>
-                <li>
-                    <h4><strong>Provincia: </strong> {{ bodega.ciudad.provincia.nombre }}</h4>
-                </li>
-                <li>
-                    <h4><strong>Pais: </strong> {{ bodega.ciudad.provincia.pais.nombre }}</h4>
-                </li>
+
+
             </ul>
         </li>
     </ul>

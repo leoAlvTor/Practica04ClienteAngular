@@ -33,6 +33,7 @@ export class BodegaComponent implements OnInit {
           let longitud = response.length;
           for (let i = 0; i < longitud; i++) {
             this.bodegas.push(response[i]);
+            console.log(response[i]);
           }
         }
       },

@@ -14,6 +14,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from '@angular/forms';
 import {ConfigService} from './config/config.service';
 import {CookieService} from 'ngx-cookie-service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import {CookieService} from 'ngx-cookie-service';
     ProductosComponent,
     PedidoComponent,
     PageNotFoundComponent,
+    NavbarComponent,
+    SidebarComponent,
 
   ],
   imports: [

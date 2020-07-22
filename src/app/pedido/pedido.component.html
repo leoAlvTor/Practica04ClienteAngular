@@ -1,6 +1,28 @@
-<h3>
+<div style="float: left;">
+    <h3>
+        Se ah agregado correctamente el producto</h3>
+    <img src="https://www.xenonfactory.es/wp-content/uploads/2019/01/movil-compra-a%C3%B1adir-producto-carrito-de-compras-desarrollo-tienda-virtual.png" />
+</div>
+<div style="margin-left: 5%;"><button (click)="confirmPedido()">ConfirmarPedido</button></div>
 
-    Se ah agregado correctamente el producto</h3>
+<div id="listado_pedidos" class="container margins" style="margin-bottom: 15px;width: 60%;">
 
+    <ul>
+        <li *ngFor="let pedido of pedidos" class="card bg-success" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">
+            <h3><strong>Codigo:</strong> {{ pedido.codigo }}</h3>
+            <hr style="margin-top: 5px; margin-bottom: 5px">
+            <ul>
+                <li>
+                    <h4><strong>Nombre: </strong> {{ pedido.estado }}</h4>
+                </li>
+                <li>
+                    <h4><strong>Nombre: </strong> {{ pedido.fecha_emision }}</h4>
+                </li>
 
-<button (click)="confirmPedido()">ConfirmarPedido</button>
+                <li>
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

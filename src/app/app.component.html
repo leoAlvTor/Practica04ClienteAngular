@@ -1,32 +1,35 @@
 <div id="navbar" style="display: none">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="https://cdn4.iconfinder.com/data/icons/logistics-67/512/warehouse-factory-stock-512.png"
-                                          alt="" width="50px" height="50px"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="https://cdn4.iconfinder.com/data/icons/logistics-67/512/warehouse-factory-stock-512.png" alt="" width="50px" height="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto" id="navbar_component">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home  <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active" id='listar_bodegas' style="display: none">
-          <a id="btn_bodegas" class="nav-link">Listar Bodegas  <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active" id='listar_categorias' style="display: none">
-          <a id="btn_categorias" class="nav-link">Listar Categorias  <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active" id='listar_productos' style="display: none">
-          <a id="btn_productos" class="nav-link">Listar Productos  <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <div class="nav-item">
-        <a class="nav-link" href="#">  Cerrar Sesion  </a>
-      </div>
-    </div>
-  </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="navbar_component">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" id='listar_bodegas' style="display: none">
+                    <a id="btn_bodegas" class="nav-link">Listar Bodegas  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" id='listar_categorias' style="display: none">
+                    <a id="btn_categorias" class="nav-link">Listar Categorias  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" id='listar_productos' style="display: none">
+                    <a id="btn_productos" class="nav-link">Listar Productos  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" id='listar_pedidos' style="">
+                    <a id="btn_pedidos" class="nav-link">Listar Pedidos  <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <div class="nav-item">
+                <a class="nav-link" href="#">  Cerrar Sesion  </a>
+            </div>
+        </div>
+    </nav>
 </div>
+
 
 <router-outlet></router-outlet>
