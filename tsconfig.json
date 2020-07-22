@@ -17,4 +17,14 @@
       "path": "./e2e/tsconfig.json"
     }
 ]
+
+/*     "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./e2e/tsconfig.json"
+    }
+]*/
 }
