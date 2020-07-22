@@ -39,6 +39,19 @@ export class ConfigService {
       });
   }
 
+  getPedidos(persona_id: string){
+    let url = 'rest/pedido/list';
+    const body = new HttpParams()
+      .set('persona_id', persona_id);
+
+    return this.http.post(url,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      });
+  }
+
   getBodegas(){
     let url = 'rest/bodega/list';
     return this.http.get(url, {

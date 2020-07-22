@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Practica04ClienteAngular"
+    }
+  },
+  "defaultProject": "Practica04ClienteAngular",
+  "cli": {
+    "analytics": "563d599f-c2c8-49e4-8850-4714ebc9eeae"
+  }
 }
