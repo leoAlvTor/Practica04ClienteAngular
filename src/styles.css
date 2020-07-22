@@ -1,19 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-.add_margin{
-  margin-top: 5px;
+.add_margin {
+    margin-top: 5px;
 }
 
-.text_format{
+.text_format {
+    font-family: "Lucida Console", Courier, monospace;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* .text_format{
   font-family: "Lucida Console", Courier, monospace;
   color: white;
   font-size: 20px;
 }
+ */
+
+.city_image {
+    background-image: url("https://i.pinimg.com/originals/45/ab/ed/45abed142d9d94fcf65db2f25a055513.jpg");
+    background-size: auto;
+}
 
 
-
-.city_image{
+/* city_image{
   background-image: url("https://i.pinimg.com/originals/45/ab/ed/45abed142d9d94fcf65db2f25a055513.jpg");
 
   background-size: auto;
 }
+ */
