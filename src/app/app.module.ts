@@ -14,6 +14,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from '@angular/forms';
 import {ConfigService} from './config/config.service';
 import {CookieService} from 'ngx-cookie-service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import {CookieService} from 'ngx-cookie-service';
     CategoriaComponent,
     ProductosComponent,
     PedidoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent,
+    SidebarComponent,
+
   ],
   imports: [
     BrowserModule,

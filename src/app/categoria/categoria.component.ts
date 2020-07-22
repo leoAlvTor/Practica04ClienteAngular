@@ -10,7 +10,7 @@ import {ConfigService} from '../config/config.service';
 export class CategoriaComponent implements OnInit {
 
   private bodegaId = '';
-  private categorias: string[] = [];
+  public categorias: string[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private _http: ConfigService, private _route: Router) {
     this.activatedRoute.queryParams.subscribe(params =>{
