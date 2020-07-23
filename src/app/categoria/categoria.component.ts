@@ -21,7 +21,7 @@ export class CategoriaComponent implements OnInit {
   ngOnInit(): void {
     document.getElementById('navbar').style.display = 'block';
     document.getElementById('listar_categorias').style.display = 'block';
-
+    document.getElementById('btn_categorias').innerHTML = 'Listar Categorias';
     document.getElementById('btn_bodegas').addEventListener('click', (ev => this._route.navigate(['/bodega'])))
     document.getElementById('btn_categorias').addEventListener('click', (ev => this.getCategorias()));
   }

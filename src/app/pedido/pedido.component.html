@@ -1,11 +1,12 @@
-<div style="float: left;">
+<div style="width: 50%; display:block; margin-left: auto; margin-right: auto">
     <h3>
         Se ah agregado correctamente el producto</h3>
-    <img src="https://www.xenonfactory.es/wp-content/uploads/2019/01/movil-compra-a%C3%B1adir-producto-carrito-de-compras-desarrollo-tienda-virtual.png" />
+    <img style="margin-left: auto; margin-right: auto" src="https://www.xenonfactory.es/wp-content/uploads/2019/01/movil-compra-a%C3%B1adir-producto-carrito-de-compras-desarrollo-tienda-virtual.png" style="margin-left: auto;margin-right: auto;" />
 </div>
-<div style="margin-left: 5%;"><button (click)="confirmPedido()">ConfirmarPedido</button></div>
+<br>
+<div style="margin-left: 44%;"><button (click)="confirmPedido()">ConfirmarPedido</button></div>
 
-<div id="listado_pedidos" class="container margins" style="margin-bottom: 15px;width: 60%;">
+<div id="listado_pedidos" class="container" style="display:block;margin-bottom: 15px;width: 100%;">
 
     <ul>
         <li *ngFor="let pedido of pedidos" class="card bg-success" style="margin-bottom: 15px; padding: 10px 10px 10px 10px">

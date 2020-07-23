@@ -21,7 +21,7 @@ export class BodegaComponent implements OnInit {
     document.getElementById('listar_bodegas').style.display = 'block';
 
     document.getElementById('btn_bodegas').addEventListener('click', (ev => this.getBodegas()));
-    alert(this.cookieService.get('cedula'));
+    
   }
 
   getBodegas(){
